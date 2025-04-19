@@ -134,16 +134,14 @@ document.getElementById('pottery-request-form')?.addEventListener('submit', asyn
 // Range slider value display
 const slider = document.getElementById('creative-freedom');
 if (slider) {
-    slider.addEventListener('input', function() {
-        // Update the slider value display
-        const value = this.value;
-        const leftLabel = this.parentElement.querySelector('.range-labels span:first-child');
-        const rightLabel = this.parentElement.querySelector('.range-labels span:last-child');
-        
-        // Adjust label opacity based on slider position
-        leftLabel.style.opacity = 1 - (value / 100);
-        rightLabel.style.opacity = value / 100;
-    });
+    const updateSliderFill = () => {
+        const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+        slider.style.setProperty('--slider-pos', `${value}%`);
+    };
+    
+    slider.addEventListener('input', updateSliderFill);
+    // Initialize on page load
+    updateSliderFill();
 }
 
 // Email Sending Function
