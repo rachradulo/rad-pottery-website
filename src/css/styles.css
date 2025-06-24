@@ -706,4 +706,124 @@ main {
 .button.secondary:hover {
     background-color: #5a6268;
     border-color: #545b62;
+}
+
+/* --- Subscribe Section Styling --- */
+.subscribe {
+  max-width: 700px;
+  margin: 3rem auto 2rem auto;
+  padding: 2rem 1rem;
+  background: #faf7ff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(80, 40, 120, 0.07);
+  text-align: center;
+}
+
+.subscribe h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.subscribe p {
+  font-size: 1.1rem;
+  color: #4d3a6d;
+  margin-bottom: 2rem;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(80, 40, 120, 0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 220px;
+  max-width: 260px;
+  position: relative;
+  transition: transform 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(80, 40, 120, 0.13);
+}
+
+.plan h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.plan p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #6d4d8d;
+}
+
+#subscribe-yearly {
+  background: linear-gradient(90deg, #a47cff 0%, #6d4d8d 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(164, 124, 255, 0.13);
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.15s;
+}
+
+#subscribe-yearly:hover {
+  background: linear-gradient(90deg, #6d4d8d 0%, #a47cff 100%);
+  transform: scale(1.04);
+}
+
+#subscribe-monthly {
+  background: #f3eaff;
+  color: #6d4d8d;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(164, 124, 255, 0.09);
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.15s;
+}
+
+#subscribe-monthly:hover {
+  background: #e3d6fa;
+  transform: scale(1.04);
+}
+
+/* Highlight the yearly plan */
+.plan.yearly {
+  border: 2.5px solid #a47cff;
+  box-shadow: 0 6px 32px rgba(164, 124, 255, 0.13);
+}
+
+.best-value-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #a47cff;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.3rem 1.1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(164, 124, 255, 0.18);
+  letter-spacing: 0.03em;
 } 
