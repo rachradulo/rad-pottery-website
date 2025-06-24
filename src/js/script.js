@@ -333,4 +333,41 @@ async function sendEmail(formData) {
         console.error('Error sending email:', error);
         throw error;
     }
+}
+
+// Stripe Subscribe Button Logic
+const monthlyBtn = document.getElementById('subscribe-monthly');
+const yearlyBtn = document.getElementById('subscribe-yearly');
+
+async function redirectToCheckout(priceId) {
+    try {
+        const response = await fetch('/.netlify/functions/create-checkout-session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                priceId,
+                successUrl: window.location.origin + '/thank-you.html',
+                cancelUrl: window.location.origin + '/index.html'
+            })
+        });
+        const data = await response.json();
+        if (data.url) {
+            window.location.href = data.url;
+        } else {
+            alert('Error: ' + (data.error || 'Could not start checkout.'));
+        }
+    } catch (err) {
+        alert('Error: ' + err.message);
+    }
+}
+
+if (monthlyBtn) {
+    monthlyBtn.addEventListener('click', function() {
+        redirectToCheckout('price_1RdasuEQCdAZmzAWiPbsBu8a');
+    });
+}
+if (yearlyBtn) {
+    yearlyBtn.addEventListener('click', function() {
+        redirectToCheckout('price_1RdatiEQCdAZmzAWUhpyM10I');
+    });
 } 
