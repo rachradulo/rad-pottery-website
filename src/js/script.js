@@ -54,9 +54,9 @@ function updateFormVisibility(isAuthenticated) {
 }
 
 // Initialize EmailJS
-(function() {
-    emailjs.init("Bzp3VfjXa97VKf-_8");
-})();
+// (function() {
+//     emailjs.init("Bzp3VfjXa97VKf-_8");
+// })();
 
 function createConfetti() {
     const colors = ['#9747FF', '#8033FF', '#B47AFF', '#D4B3FF'];
@@ -333,7 +333,7 @@ async function sendEmail(formData) {
         console.error('Error sending email:', error);
         throw error;
     }
-}
+} 
 
 // Stripe Subscribe Button Logic
 const monthlyBtn = document.getElementById('subscribe-monthly');
