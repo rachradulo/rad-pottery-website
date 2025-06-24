@@ -1,0 +1,12 @@
+{
+  "name": "rad-pottery-website",
+  "version": "1.0.0",
+  "description": "Rad Pottery website with Stripe subscription integration",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "stripe": "^12.0.0"
+  }
+} 
