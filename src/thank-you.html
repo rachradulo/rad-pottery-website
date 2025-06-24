@@ -5,12 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | Rad Pottery</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <main class="thank-you">
-        <h1>Thank You for Subscribing!</h1>
-        <p>We'll let you know when new products drop via email.<br>Enjoy your early access to exclusive pottery drops!</p>
-        <a href="index.html" class="btn">Back to Home</a>
+    <nav class="navbar">
+        <div class="logo">Rad Pottery</div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Gallery</a>
+            <a href="request.html">Request</a>
+            <a href="my-requests.html">My Requests</a>
+            <a href="about.html">About</a>
+            <div id="rownd-auth"></div>
+        </div>
+    </nav>
+    <main class="thank-you-main">
+        <div class="thank-you-card">
+            <div class="pottery-illustration">
+                <!-- Simple pottery SVG illustration -->
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="40" cy="70" rx="28" ry="8" fill="#e3d6fa"/>
+                  <ellipse cx="40" cy="30" rx="18" ry="28" fill="#a47cff"/>
+                  <ellipse cx="40" cy="30" rx="14" ry="22" fill="#fff" fill-opacity="0.7"/>
+                  <ellipse cx="40" cy="18" rx="12" ry="4" fill="#6d4d8d" fill-opacity="0.18"/>
+                </svg>
+            </div>
+            <h1>Thank You for Subscribing!</h1>
+            <p class="thank-you-message">You're officially on the list for early access to new pottery drops and exclusive content.<br>We'll let you know via email when new products are available!</p>
+            <a href="index.html" class="btn thank-you-btn">Back to Home</a>
+        </div>
     </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/rad_pottery" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:rradulovich2@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">Gallery</a>
+            <a href="request.html">Request</a>
+            <a href="my-requests.html">My Requests</a>
+            <a href="about.html">About</a>
+        </div>
+        <p>&copy; 2024 Rad Pottery. All rights reserved.</p>
+    </footer>
 </body>
 </html> 
